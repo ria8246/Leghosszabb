@@ -3,10 +3,13 @@ class HelloWorldApp {
 
 
     public static void main(String[] args) {
-
         //String str = "AABBBCCCCDD";
-        String str = "AABBBCCCCDDXDDDDDNJKLLLLLL";
-
+        String str = null;
+        if (args.length == 0) {
+            str = "AABBBCCCCDDXDDDDDNJKLLLLLL";
+        }else {
+            str = args[0];
+        }
 
         int i = 0;
         int j =0;
@@ -32,7 +35,7 @@ class HelloWorldApp {
         }
 
         System.out.println("leghosszabb_max: " + leghosszabb_max);
-        System.out.println("tmp: " + leggyakoribb_ch);
+        System.out.println("leghosszabb: " + leggyakoribb_ch);
 
     }
 }
