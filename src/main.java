@@ -34,6 +34,7 @@ class HelloWorldApp {
             i++;
         }
 
+        System.out.println("Karakter összehasonlítások száma: " + (j-1));
         System.out.println("leghosszabb_max: " + leghosszabb_max);
         System.out.println("leghosszabb: " + leggyakoribb_ch);
 
