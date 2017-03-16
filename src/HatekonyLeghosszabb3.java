@@ -1,7 +1,8 @@
 /**
  * Created by Ria on 2017.02.26..
  */
-public class HatekonyLeghosszabb3 {
+
+public class HatekonyLeghosszabb3{
     private static int numOfCompers =0;
     private static boolean compare(char l, char r){
         System.out.println("comparing..." );
@@ -10,16 +11,8 @@ public class HatekonyLeghosszabb3 {
         numOfCompers++;
         return l == r;
     }
-    public static void main(String[] args) {
-        String str = null;
-        if (args.length == 0) {
-            //str = "AABBBCCCCDDXDDDDDNJKLLLLLL";
-            //str = "AABBBCCCCDD";
-            //str = "AABBBCCCC";
-            str = "almafaa";
-        }else {
-            str = args[0];
-        }
+
+    public static String leghosszabb(String str){
         int index = 1;
         char leggyakoribb_ch ='x';
         int leghosszabb_max = 0;
@@ -47,6 +40,22 @@ public class HatekonyLeghosszabb3 {
         }
         System.out.println("leghosszabban előforduló karakter: " + leggyakoribb_ch + " (" + leghosszabb_max + " db)");
         System.out.println("Összehasonlítások száma: " + numOfCompers);
+
+        String result = "";
+        for(int i=0; i<leghosszabb_max; i++) {
+            result += Character.toString(leggyakoribb_ch);
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        String str = null;
+        if (args.length == 0) {
+            str = "almafaa";
+        }else {
+            str = args[0];
+        }
+        System.out.println("RESULT: "+leghosszabb(str));
     }
 }
 
